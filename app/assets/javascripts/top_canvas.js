@@ -6,7 +6,7 @@ var oldx = null;
 var oldy = null;
 
 function setupCanvasTop() {
-  canvas_top.height = 400;
+  canvas_top.height = 1200;
   canvas_top.width = 1200;
 }
 
@@ -116,6 +116,25 @@ function drawClouds() {
   context_top.stroke();
 }
 
+function drawMessage() {
+  context_top.font = 'bold 40px serif';
+  context_top.fillStyle = "black";
+  context_top.shadowColor = 'clear';
+  context_top.fillText("Hello, my name is Joshua Lee", 350, 340);
+  context_top.fillText("A web developer", 460, 390);
+  context_top.font = 'normal 30px serif';
+  context_top.fillText("(Draw me a beard)", 500, 430);
+}
+
+function insertPicture() {
+  var imageObj = new Image();
+
+  imageObj.onload = function() {
+    context_top.drawImage(imageObj, 200, 460);
+  };
+  imageObj.src = "http://hostmypicture.com/images/picturzmz.jpg";
+}
+
 // canvas drawing
 function getMousePos(canvas_top, evt) {
   var rect = canvas_top.getBoundingClientRect();
@@ -169,3 +188,5 @@ setupCanvasTop();
 drawSun();
 drawSunLights();
 drawClouds();
+drawMessage();
+insertPicture();
