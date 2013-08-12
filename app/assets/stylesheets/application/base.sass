@@ -1,17 +1,52 @@
 @import compass/reset
 @import compass
 
-.portfolio_container
-  width: 1200px
+$grey: #fafafa
+
+.account_container
+  width: 1000px
   margin: 0 auto
-  text-align: center
-  +background-image(linear-gradient(#00E5FF, #FFF, #02E830))
+  color: #d4d4d4
+
+.content_wrapper
+  margin-top: 23px
+
+.header_font
+  font-family: 'Droid Serif', serif
 
 body
-  background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSN0mb_A9DWctOTHdQF66I2C1_Qsw5QFplT9GqCVBfG4XBlTK9J")
+  +background-image(linear-gradient(#000, #333))
+  font-family: Helvetica, Arial, Sans-serif
 
 h1
-  font-size: 3em
+  font-size: 1.5em
 
-p
-  font-size: 2em
+h2
+  font-size: 1.3em
+
+h3
+  font-size: 1.1em
+
+.carolina_blue
+  color: #71b3d4
+
+.dark_blue
+  color: #5173a9
+
+.light_blue
+  color: #abfaff
+
+.bullet_point
+  padding-left: 10px
+  margin-left: 17px
+  list-style-type: disc
+
+.button
+  color: black
+  padding: 0.5em
+  border: 1px solid darken($grey, 10%)
+  +background-image(linear-gradient($grey, darken($grey, 10%)))
+  +border-radius(5px)
+  &:hover
+    color: #5173a9
+    +background-image(linear-gradient(darken($grey, 25%), darken($grey,25%)))
