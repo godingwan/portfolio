@@ -2,7 +2,7 @@
   .header
     .personal_info
       .picture= image_tag('picture.jpeg')
-      %h1.name Joshua Lee
+      %h1.name.header_font Joshua Lee
       %nav
         %a.nav_link.button{:href => "https://www.github.com/jsungholee"} Github
         %a.nav_link.button{:href => "http://www.linkedin.com/in/jsungholee"} Linkedin
@@ -10,43 +10,55 @@
   .content_wrapper
     .info_wrapper
       .info
-        %h1.carolina_blue University of North Carolina at Chapel Hill
+        %h1.carolina_blue.header_font UNC at Chapel Hill
         %h3 Bachelor of Science
 
       .info
-        %h1.dark_blue Contact:
+        %h1.dark_blue.header_font Contact:
+        %h3.email jsungholee@gmail.com
         %h3 (704) 247-7640
-        %h3 jsungholee@gmail.com
         %h3 Boston, MA
 
       .info
-        %h1.light_blue Skills:
+        %h1.light_blue.header_font Skills:
         %ul
-          %li.bullet_point Ruby on Rails
-          %li.bullet_point Ruby
-          %li.bullet_point CSS3
-          %li.bullet_point HTML5
-          %li.bullet_point SQL
-          %li.bullet_point Test Driven Development
-          %li.bullet_point Javascript
-          %li.bullet_point jQuery
-          %li.bullet_point Git
-          %li.bullet_point Heroku
+          %li.skill_item Ruby on Rails
+          %li.skill_item Ruby
+          %li.skill_item CSS3
+          %li.skill_item HTML5
+          %li.skill_item SQL
+          %li.skill_item Test Driven Development
+          %li.skill_item Javascript
+          %li.skill_item jQuery
+          %li.skill_item Git
+          %li.skill_item Heroku
+
+      .info
+        %h1.carolina_blue.header_font Other Qualities:
+        %ul
+          %li.quality Loves learning new things
+          %li.quality Interested in Psychology, especially in team-dynamics
 
     .experience_container
       .experience
-        %h1.dark_blue Experiences:
-        %h2.light_blue Launch Academy
-        %h3 Software Developer in Training, 05/2013 ­- 07/2013
-        %p Launch Academy is a 10­week, immersive bootcamp taking eager learners with little to no experience and teaching them what it takes to add value as a junior contributor to a software engineering team.
-
-        %h2.light_blue Office of Arts and Sciences Information Services
-        %h3 IT Support, 08/2011 ­- 05/2012
-        %p Technical support for the faculty and staff at University of North Carolina at Chapel Hill
+        %h1.dark_blue.header_font About Me:
+        %p.summary I am a Junior Software Developer looking to build upon a strong foundation in Ruby and Ruby on Rails gained through developing a web application called Faven. I want to apply this foundation to more complex application development. I also have basic to moderate database development with SQL and Active Record enviornments.
 
       .experience
-        %h1.dark_blue Projects:
-        %a.faven{:href => "http://faven.herokuapp.com"} Faven
+        %h1.dark_blue.header_font Experiences:
+        .job
+          %h2.light_blue.header_font Launch Academy
+          %h3 Software Developer in Training, 05/2013 ­- 07/2013
+          %p Launch Academy is a 10­week, immersive bootcamp taking eager learners with little to no experience and teaching them what it takes to add value as a junior contributor to a software engineering team.
+
+        .job
+          %h2.light_blue.header_font Office of Arts and Sciences Information Services
+          %h3 IT Support, 08/2011 ­- 05/2012
+          %p Technical support for the faculty and staff at University of North Carolina at Chapel Hill
+
+      .experience
+        %h1.dark_blue.header_font Projects:
+        %a.faven.header_font{:href => "http://faven.herokuapp.com"} Faven
         %p Website that keeps track of a user's favorite lists. Great ice breaker tool to quickly find mutual interests with other users.
         %ul
           %li.bullet_point Created through Test Driven Development with Ruby on Rails
